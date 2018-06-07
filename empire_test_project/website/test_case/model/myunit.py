@@ -1,0 +1,11 @@
+import unittest
+from learning_selenium.empire_test_project.driver.driver import browser
+
+class StartEnd(unittest.TestCase):
+    def setUp(self):
+        self.driver=browser()
+        self.driver.implicitly_wait(10)
+        self.driver.maximize_window()
+
+    def tearDown(self):
+        self.driver.quit()
